@@ -15,26 +15,14 @@
     "tests"
   ],
   "dependencies": {
-    "animo.js": "^1.0.3",
-    "blockUI": "blockui#*",
-    "bootstrap-daterangepicker": "^2.1.19",
-    "bootstrap-progressbar": "^0.9.0",
-    "bootstrap": "^3.3.6",
-    "Counter-Up": "counter-up#^1.0.0",
-    "flot.curvedlines": "^1.1.1",
-    "flot.tooltip": "^0.8.7",
-    "jquery-advanced-news-ticker": "https://github.com/risq/jquery-advanced-news-ticker.git#1.0.0",
-    "jquery-minicolors": "^2.2.4",
-    "jquery-ui": "^1.11.4",
-    "jquery.cookie": "jquery-cookie#^1.4.1",
-    "jquery.easy-pie-chart": "^2.1.6",
-    "kapusta-jquery.sparkline": "^2.1.3",
-    "malihu-custom-scrollbar-plugin": "^3.1.3",
-    "polymer": "^1.4.0",
-    "summernote": "^0.8.1",
-    "themify-icons": "^0.1.0",
-    "waypoints": "jquery-waypoints#^4.0.0",
-    "webcomponentsjs": "^0.7.22",
-    "flot": "^0.8.3"
+    "animo-import": "*",
+    "themify-import": "*",
+    "summernote-import": "*",
+    "malihu-scrollbar-import": "*",
+    "kapusta-sparkline-import": "*",
+    "jquery-import-seph": "*",
+    "flot-import": "*",
+    "bootstrap-import": "*",
+    "polymer": "^1.4.0"
   }
 }
