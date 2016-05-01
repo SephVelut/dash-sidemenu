@@ -1,25 +1,10 @@
 <link rel="import" href="../polymer/polymer.html">
 
-<link rel="import" href="../jquery-import-seph/jquery.html">
-<link rel="import" href="../jquery-import-seph/jquery-blockui.html">
-<link rel="import" href="../jquery-import-seph/jquery-cookie.html">
-<link rel="import" href="../jquery-import-seph/jquery-easypiechart.html">
-<link rel="import" href="../jquery-import-seph/jquery-minicolors.html">
-<link rel="import" href="../jquery-import-seph/jquery-news-ticker.html">
-<link rel="import" href="../jquery-import-seph/jquery-ui.html">
-<link rel="import" href="../jquery-import-seph/jquery-waypoint.html">
-<link rel="import" href="../kapusta-sparkline-import/kapusta-jquery-sparkline.html">
-<link rel="import" href="../animo-import/animo.html">
-<link rel="import" href="../bootstrap-import/bootstrap-daterangepicker.html">
-<link rel="import" href="../bootstrap-import/bootstrap-progressbar.html">
-<link rel="import" href="../bootstrap-import/bootstrap.html">
-<link rel="import" href="../flot-import/flot.html">
-<link rel="import" href="../flot-import/flot-curvedlines.html">
-<link rel="import" href="../flot-import/flot-resize.html">
-<link rel="import" href="../flot-import/flot-tooltips.html">
-<link rel="import" href="../malihu-scrollbar-import/malihu-scrollbar.html">
-<link rel="import" href="../summernote-import/summernote.html">
-<link rel="import" href="../themify-import/themify-icons.html">
+<link rel="import" type="text/css" href="../jquery-import-seph/jquery.html">
+<link rel="import" type="text/css" href="../jquery-import-seph/jquery-easypiechart.html">
+<link rel="import" type="text/css" href="../bootstrap-import/bootstrap.html">
+<link rel="import" type="text/css" href="../kapusta-sparkline-import/kapusta-jquery-sparkline.html">
+<link rel="import" type="text/css" href="../themify-import/themify-icons.html">
 
 <link rel="stylesheet" type="text/css" href="css/umega.css">
 
@@ -113,7 +98,7 @@
                     <ul class="posts media-list">
                         <li class="media">
                             <div class="media-left">
-                                <a href="#" class="inline-block"><img src="images/posts/01.jpg" alt="" class="media-object mo-lg"></a>
+                                <a href="#" class="inline-block"><img src="" alt="" class="media-object mo-lg"></a>
                             </div>
                             <div class="media-body media-middle">
                                 <a href="#">
@@ -123,7 +108,7 @@
                         </li>
                         <li class="media">
                             <div class="media-left">
-                                <a href="#" class="inline-block"><img src="images/posts/02.jpg" alt="" class="media-object mo-lg"></a>
+                                <a href="#" class="inline-block"><img src="" alt="" class="media-object mo-lg"></a>
                             </div>
                             <div class="media-body media-middle">
                                 <a href="#">
@@ -185,13 +170,6 @@
                         $('.progress .progress-bar').progressbar();
                     }
 
-
-                    $('.newsticker').newsTicker({
-                        row_height: 64,
-                        max_rows: 1,
-                        direction: 'down'
-                    });
-
                     $('#sp-visitors').sparkline([191, 250, 332, 192, 420, 343, 301, 438, 177, 491], {
                         type: 'line',
                         width: '230',
@@ -234,22 +212,6 @@
                             duration: 2000,
                             enabled: true
                         }
-                    });
-
-                    $('#compose-mail').summernote({
-                        height: 200,
-                        toolbar: [
-            ['style', ['style']],
-            ['font', ['bold', 'italic', 'underline', 'clear']],
-            ['fontname', ['fontname']],
-            ['fontsize', ['fontsize']],
-            ['color', ['color']],
-            ['para', ['ul', 'ol', 'paragraph']],
-            ['height', ['height']],
-            ['table', ['table']],
-            ['insert', ['link', 'picture', 'hr']],
-            ['view', ['fullscreen']]
-        ]
                     });
                 });
             }
