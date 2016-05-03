@@ -10,211 +10,114 @@
 
 <dom-module id="dash-sidemenu">
     <template>
-        <aside class="main-sidebar pinned">
-            <div class="brand">
-                <a href="" class="logo">
-                    <h2>Redcloud9</h2></a><a href="javascript:;" role="button" class="sidebar-toggle visible-xs-block"><i class="ti-close text-white"></i></a></div>
-            <div class="profile">
-                <div id="esp-profile" data-percent="65" style="height: 130px; width: 130px; line-height: 100px; padding: 15px;" class="easy-pie-chart"><img src="images/supportmale-1.png" alt="" class="avatar img-circle"><span class="status bg-success"></span></div>
-                <h5 class="text-white mt-15 mb-5">FirstName LastName</h5>
-                <div class="text-muted">Verifier</div>
+      <aside class="main-sidebar pinned">
+          <div class="brand">
+            <a href="" class="logo">
+              <h2>{{title}}</h2>
+            </a>
+            <a href="javascript:;" role="button" class="sidebar-toggle visible-xs-block">
+              <i class="ti-close text-white"></i>
+            </a>
+          </div>
+          <div class="profile">
+            <div id="esp-profile" data-percent$="{{progress}}" style="height: 130px; width: 130px; line-height: 100px; padding: 15px;" class="easy-pie-chart">
+              <img src="images/supportmale-1.png" alt="" class="avatar img-circle">
+              <span class="status bg-success"></span>
             </div>
-            <!-- Nav tabs-->
-            <ul role="tablist" class="nav nav-tabs nav-justified nav-sidebar">
-                <li role="presentation" class="active"><a href="#menu" aria-controls="menu" role="tab" data-toggle="tab"><i class="ti-menu"></i></a></li>
-                <li role="presentation"><a href="#portfolio" aria-controls="portfolio" role="tab" data-toggle="tab"><i class="ti-user"></i></a></li>
-                <li role="presentation" class="bubble"><a href="#email" aria-controls="email" role="tab" data-toggle="tab"><i class="ti-email"><span class="dot bg-danger"></span></i></a></li>
-                <li role="presentation"><a href="#setting" aria-controls="setting" role="tab" data-toggle="tab"><i class=" ti-pulse"></i></a></li>
-            </ul>
-            <!-- Tab panes-->
-            <div class="tab-content nav-sidebar-content">
-                <div id="menu" role="tabpanel" class="tab-pane fade in active">
-                    <ul class="list-unstyled navigation mb-0">
-                        <li><a href="" class="bubble"><i class="ti-home"></i> Dash<span class="badge bg-danger">3</span></a></li>
-                        <li class="header">Stats</li>
-                        <li class="panel"><a role="button" data-toggle="collapse" data-parent=".navigation" href="#collapse0" aria-expanded="false" aria-controls="collapse0" class="collapsed"><i class="ti-bar-chart"></i> Productions</a>
-                            <ul id="collapse0" class="list-unstyled collapse">
-                                <li><a href="">Grids</a></li>
-                                <li><a href="">Charts</a></li>
-                                <li><a href="">Queries</a></li>
-                            </ul>
-                        </li>
-                        <li><a href=""><i class="ti-dashboard"></i> Goals</a></li>
-                        <li class="header">Call Centre</li>
-                        <li><a><i class="ti-headphone-alt"></i> Dialer</a></li>
-                        <li><a href=""><i class="ti-github"></i> VeifierBot</a></li>
-                        <li class="header">Help</li>
-                        <li><a href=""><i class="ti-help-alt"></i> Documentation</a></li>
-                    </ul>
-                    <div class="header">Goals</div>
-                    <ul class="list-unstyled pl-15 pr-15">
-                        <li class="mb-20">
-                            <div class="block clearfix mb-10"><span class="pull-left fs-12 text-muted">Mine</span><span class="pull-right label label-outline label-warning">65%</span></div>
-                            <div class="progress progress-xs mb-0">
-                                <div role="progressbar" data-transitiongoal="65" class="progress-bar progress-bar-warning" style="width: 60%"></div>
-                            </div>
-                        </li>
-                        <li class="mb-20">
-                            <div class="block clearfix mb-10"><span class="pull-left fs-12 text-muted">Team</span><span class="pull-right label label-outline label-danger">80%</span></div>
-                            <div class="progress progress-xs mb-0">
-                                <div role="progressbar" data-transitiongoal="80" class="progress-bar progress-bar-danger" style="width: 80%"></div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div id="portfolio" role="tabpanel" class="tab-pane fade">
-                    <div class="header">Performance</div>
-                    <div class="rating clearfix">
-                        <div class="pull-left score bg-black fs-24 fw-600 text-center">4/H</div>
-                        <div class="pull-left">
-                            <div class="progress">
-                                <div style="width: 100%" role="progressbar" data-transitiongoal="100" class="progress-bar five-star"></div>
-                            </div>
-                            <div class="progress">
-                                <div style="width: 80%" role="progressbar" data-transitiongoal="80" class="progress-bar four-star"></div>
-                            </div>
-                            <div class="progress">
-                                <div style="width: 10%" role="progressbar" data-transitiongoal="10" class="progress-bar three-star"></div>
-                            </div>
-                            <div class="progress">
-                                <div style="width: 25%" role="progressbar" data-transitiongoal="25" class="progress-bar two-star"></div>
-                            </div>
-                            <div class="progress">
-                                <div style="width: 5%" role="progressbar" data-transitiongoal="5" class="progress-bar one-star"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-center fs-12 mt-5 mb-0">based on weekly leads per hour</p>
-                    <div class="header">Competition</div>
-                    <div class="followers"><img src="images/p1.png" alt="" class="img-circle"><img src="images/p2.png" alt="" class="img-circle"><img src="images/p3.png" alt="" class="img-circle"><a href="#" class="more img-circle text-center fs-24 fw-600 text-info">+</a></div>
-                    <p class="text-center fs-12 mt-5 mb-0">in the top 10</p>
-                    <div class="header">My productions today</div>
-                    <div id="sp-visitors"></div>
-                    <p class="text-center fs-12 mt-5 mb-0">Keeping up above average</p>
-                    <div class="header">Team's productions today</div>
-                    <div id="sp-revenue"></div>
-                    <p class="text-center fs-12 mt-5 mb-0">Breaking new records</p>
-                    <div class="header">Your Blog Posts</div>
-                    <ul class="posts media-list">
-                        <li class="media">
-                            <div class="media-left">
-                                <a href="#" class="inline-block"><img src="" alt="" class="media-object mo-lg"></a>
-                            </div>
-                            <div class="media-body media-middle">
-                                <a href="#">
-                                    <h6 class="media-heading text-muted">10 tips to help the new guys out</h6></a>
-                                <time datetime="2015-09-14T14:28:26+07:00" class="fs-11">May 14, 2016</time>
-                            </div>
-                        </li>
-                        <li class="media">
-                            <div class="media-left">
-                                <a href="#" class="inline-block"><img src="" alt="" class="media-object mo-lg"></a>
-                            </div>
-                            <div class="media-body media-middle">
-                                <a href="#">
-                                    <h6 class="media-heading text-muted">How to improve your rebuttals</h6></a>
-                                <time datetime="2015-10-10T20:27:48+07:00" class="fs-11">May 10, 2016</time>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div id="email" role="tabpanel" class="tab-pane fade">
-                    <button type="button" data-toggle="modal" data-target=".compose-mail-modal" class="btn btn-raised btn-block btn-danger mt-10"><i class="ti-pencil-alt"></i> Compose Mail</button>
-                    <ul class="list-unstyled navigation mb-0">
-                        <li class="header">Email</li>
-                        <li><a href="" class="bubble"><i class="ti-archive"></i> Inbox<span class="badge bg-danger">5</span></a></li>
-                        <li><a href=""><i class="ti-location-arrow"></i> Sent</a></li>
-                        <li><a href=""><i class="ti-notepad"></i> Draft</a></li>
-                        <li><a href=""><i class="ti-trash"></i> Trash</a></li>
-                        <li><a href=""><i class="ti-flag-alt"></i> Important</a></li>
-                        <li><a href=""><i class="ti-star"></i> Starred</a></li>
-                        <li class="header">Folders</li>
-                        <li><a href="#"><i class="ti-folder"></i> Newsletter</a></li>
-                        <li><a href="#"><i class="ti-folder"></i> Friend</a></li>
-                        <li><a href="#"><i class="ti-folder"></i> Company</a></li>
-                        <li><a href="#"><i class="ti-folder"></i> Downloaded</a></li>
-                    </ul>
-                </div>
-                <div id="setting" role="tabpanel" class="tab-pane fade">
-                    <div class="header">Call Centre health</div>
-                </div>
-            </div>
-        </aside>
+            <h5 class="text-white mt-15 mb-5">{{name}}</h5>
+            <div class="text-muted">{{role}}</div>
+          </div>
+
+          <content select="dash-menutabs, mini-progressbar"></content>
+      </aside>
     </template>
 
     <script>
-        Polymer({
-            is: 'dash-sidemenu',
+    Polymer({
+      is: 'dash-sidemenu',
 
-            attached: function () {
-                this.async(function () {
+      properties: {
+        name: {
+          type: String,
+          value: "First Last"
+        },
 
-                    var initCustomSidebar = function () {
-                        $('.main-sidebar').mCustomScrollbar({
-                            autoHideScrollbar: true,
-                            mouseWheel: {
-                                scrollAmount: 250
-                            }
-                        });
-                    };
+        role: {
+          type: String,
+          value: "Role"
+        },
 
-                    $('.sidebar-toggle').on('click', function () {
-                        $('.main-sidebar').toggleClass('closed');
-                    });
+        title: {
+          type: String,
+          value: "Title"
+        },
 
-                    if ($(window).width() < 768) {
-                        $('.main-sidebar').addClass('closed');
-                    }
+        progress: {
+          type: String
+        }
+      },
 
-                    if ($('.progress').length > 0) {
-                        $('.progress .progress-bar').progressbar();
-                    }
-
-                    $('#sp-visitors').sparkline([191, 250, 332, 192, 420, 343, 301, 438, 177, 491], {
-                        type: 'line',
-                        width: '230',
-                        height: '60',
-                        lineColor: '#03A9F4',
-                        fillColor: false,
-                        lineWidth: 2,
-                        spotColor: '#03A9F4',
-                        minSpotColor: '#03A9F4',
-                        maxSpotColor: '#03A9F4',
-                        highlightSpotColor: '#F9CE1D',
-                        highlightLineColor: '#F9CE1D',
-                        spotRadius: 4
-                    });
-
-                    $('#sp-revenue').sparkline([741, 901, 758, 776, 897, 801, 633, 801, 722, 773], {
-                        type: 'line',
-                        width: '230',
-                        height: '60',
-                        lineColor: '#03A9F4',
-                        fillColor: false,
-                        lineWidth: 2,
-                        spotColor: '#03A9F4',
-                        minSpotColor: '#03A9F4',
-                        maxSpotColor: '#03A9F4',
-                        highlightSpotColor: '#F9CE1D',
-                        highlightLineColor: '#F9CE1D',
-                        spotRadius: 4
-                    });
-
-                    $('#esp-profile').easyPieChart({
-                        barColor: '#2980b9',
-                        trackColor: 'rgba(0,0,0,0)',
-                        scaleColor: false,
-                        scaleLength: 0,
-                        lineCap: 'round',
-                        lineWidth: 3,
-                        size: 130,
-                        animate: {
-                            duration: 2000,
-                            enabled: true
-                        }
-                    });
-                });
+      attached: function () {
+        var con = Polymer.dom(this.root).querySelector('content');
+        this._observer = Polymer.dom(con).observeNodes(function(info) {
+          info.addedNodes.map(function(node, index) {
+            if(node.tagName == "DASH-MENUTABS") {
+              var tabCon = node.querySelector('.tab-content');
+              Polymer.dom(tabCon).node.className += ' nav-sidebar-content';
             }
+
+            if(node.tagName == "MINI-PROGRESSBAR") {
+              var prog = Polymer.dom(node);
+              var wrapper = document.createElement('div');
+              wrapper.setAttribute('class', 'nav-sidebar-content');
+
+              var holder = [];
+              for(var i = 0; i < prog.node.children.length; i++) {
+                holder.push(prog.node.children[i]);
+              }
+
+              holder.map(function(el) {
+                wrapper.appendChild(el);
+              });
+
+              prog.node.appendChild(wrapper);
+            }
+          })
         });
+
+        this.async(function () {
+          var initCustomSidebar = function () {
+            $('.main-sidebar').mCustomScrollbar({
+              autoHideScrollbar: true,
+              mouseWheel: {
+                scrollAmount: 250
+              }
+            });
+          };
+
+          $('.sidebar-toggle').on('click', function () {
+            $('.main-sidebar').toggleClass('closed');
+          });
+
+          if ($(window).width() < 768) {
+            $('.main-sidebar').addClass('closed');
+          }
+
+          $(this.$['esp-profile']).easyPieChart({
+            barColor: '#2980b9',
+            trackColor: 'rgba(0,0,0,0)',
+            scaleColor: false,
+            scaleLength: 0,
+            lineCap: 'round',
+            lineWidth: 3,
+            size: 130,
+            animate: {
+              duration: 2000,
+              enabled: true
+            }
+          });
+        });
+      }
+    });
     </script>
-</dom-module>
+  </dom-module>
